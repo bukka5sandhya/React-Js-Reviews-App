@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+In this project, let's build a Reviews App by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Refer to the image below:
 
-## Available Scripts
+![image](https://github.com/bukka5sandhya/React-Js-Reviews-App/assets/133884532/3a14357b-5217-41cf-86da-f2a1d2a195bd)
 
-In the project directory, you can run:
+https://assets.ccbp.in/frontend/content/react-js/reviews-app-output-v2.gif
 
-### `npm start`
+Design Files
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Click to view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Extra Small (Size < 576px), Small (Size >= 576px)
 
-### `npm test`
+Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Set Up Instructions
 
-### `npm run build`
+Click to view
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Download dependencies by running npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start up the app using npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Completion Instructions
 
-### `npm run eject`
+Functionality to be added
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app must have the following functionalities
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When the left arrow is clicked, then the previous review details should be displayed
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+When the right arrow is clicked, then the next review details should be displayed
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If the review that is being displayed is the first in the list of reviews
 
-## Learn More
+There should not be any state change when the left arrow is clicked
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If the review that is being displayed is the last in the list of reviews
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There should not be any state change when the right arrow is clicked
 
-### Code Splitting
+The ReviewsCarousel component receives the reviewsList as a prop. It consists of a list of review objects with the following properties in each review object
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Key	Data Type
 
-### Analyzing the Bundle Size
+imgUrl	String
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+username	String
 
-### Making a Progressive Web App
+companyName	String
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+description	String
 
-### Advanced Configuration
+Implementation Files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Use these files to complete the implementation:
 
-### Deployment
+src/components/ReviewsCarousel/index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+src/components/ReviewsCarousel/index.css
 
-### `npm run build` fails to minify
+Quick Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Click to view
+
+You can use the cursor CSS property to specify the mouse cursor to be displayed when pointing over an element
+
+cursor:pointer;
+
+![image](https://github.com/bukka5sandhya/React-Js-Reviews-App/assets/133884532/172530c3-c67b-4442-85d4-a530f9b0ad2c)
+
+You can use the below outline CSS property for buttons and input elements to remove the highlighting when the elements are clicked
+
+outline: none;
+
+Important Note
+Click to view
+
+The following instructions are required for the tests to pass
+
+The button to check the previous review should have the data-testid attribute with value as leftArrow
+
+The button to check the next review should have the data-testid attribute with value as rightArrow
+
+The profile images should have the alt as the value of the key username from each review object provided
+
+Resources
+
+Image URLs
+
+https://assets.ccbp.in/frontend/react-js/reviews-bg.png
+
+https://assets.ccbp.in/frontend/react-js/left-arrow-img.png alt should be left arrow
+
+https://assets.ccbp.in/frontend/react-js/right-arrow-img.png alt should be right arrow
+
+Colors
+
+Hex: #ffffff
+
+Hex: #171f46
+
+Font-families
+
+Things to Keep in Mind
+
+All components you implement should go in the src/components directory.
+
+Don't change the component folder names as those are the files being imported into the tests.
+
+Do not remove the pre-filled code
+
+Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
